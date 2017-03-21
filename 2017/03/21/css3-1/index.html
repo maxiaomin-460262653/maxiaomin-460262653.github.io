@@ -3,18 +3,25 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>Hello World | 今天为明天</title>
+  <title>Animate.css是一个有趣的，跨浏览器的css3动画库。很值得我们在项目中引用。 | 今天为明天</title>
   <meta name="author" content="John Doe" />
 
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in " />
+  <meta name="description" content="用法
+1、首先引入animate css文件
+123
+  2、给指定的元素加上指定的动画样式名
+1
+这里包括两个class名，第一个是基本的，必须添加的样式名，任何想实现的元素都得添加这个。第二个是指定的动画样式名。
+3、如果说想给某个元素动态添加动画样式，可以通过jquery来实现：
+1$(‘#y" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <meta property="og:title" content="Hello World" />
+  <meta property="og:title" content="Animate.css是一个有趣的，跨浏览器的css3动画库。很值得我们在项目中引用。" />
   <meta property="og:site_name" content="今天为明天" />
 
   
@@ -63,25 +70,29 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2017-03-19T09:58:20.415Z"><a href="/2017/03/19/hello-world/">2017-03-19</a></time>
+        <time datetime="2017-03-21T15:22:58.972Z"><a href="/2017/03/21/css3-1/">2017-03-21</a></time>
       
       
   
-    <h1 class="title">Hello World</h1>
+    <h1 class="title">Animate.css是一个有趣的，跨浏览器的css3动画库。很值得我们在项目中引用。</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>用法</p>
+<p>1、首先引入animate css文件</p>
+<p>1<br>2<br>3</p>
+<p><head><br>  <link rel="stylesheet" href="animate.min.css"><br></head><br>2、给指定的元素加上指定的动画样式名</p>
+<p>1</p>
+<p><div class="animated bounceOutLeft"></div><br>这里包括两个class名，第一个是基本的，必须添加的样式名，任何想实现的元素都得添加这个。第二个是指定的动画样式名。</p>
+<p>3、如果说想给某个元素动态添加动画样式，可以通过jquery来实现：</p>
+<p>1<br>$(‘#yourElement’).addClass(‘animated bounceOutLeft’);<br>4、当动画效果执行完成后还可以通过以下代码添加事件</p>
+<p>1<br>$(‘#yourElement’).one(‘webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend’, doSomething);<br>你也可以通过 JavaScript 或 jQuery 给元素添加这些 class，比如：</p>
+<p>1<br>2<br>3<br>$(function(){<br>    $(‘#jq22’).addClass(‘animated bounce’);<br>});<br>有些动画效果最后会让元素不可见，比如淡出、向左滑动等等，可能你又需要将 class 删除，比如：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>$(function(){<br>    $(‘#jq22’).addClass(‘animated bounce’);<br>    setTimeout(function(){<br>        $(‘#jq22’).removeClass(‘bounce’);<br>    }, 1000);<br>});<br>animate.css 的默认设置也许有些时候并不是我们想要的，所以你可以重新设置，比如：</p>
+<p>1<br>2<br>3<br>4<br>5</p>
+<p>#jq22{<br>    animate-duration: 2s;    //动画持续时间<br>    animate-delay: 1s;    //动画延迟时间<br>    animate-iteration-count: 2;    //动画执行次数<br>}<br>所有的动画样式名请参见demo页面。</p>
 
       
     </div>
